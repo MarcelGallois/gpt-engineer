@@ -143,6 +143,7 @@ class AI:
 
 def fallback_model(model: str) -> str:
     try:
+        model = input("Please enter a valid model name: ")
         openai.Model.retrieve(model)
         return model
     except openai.InvalidRequestError:
